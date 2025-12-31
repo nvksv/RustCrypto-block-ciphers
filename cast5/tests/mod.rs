@@ -80,4 +80,4 @@ fn full_maintenance_test() {
 
 // Test vectors from NESSIE:
 // https://www.cosic.esat.kuleuven.be/nessie/testvectors/bc/cast-128/Cast-128-128-64.verified.test-vectors
-cipher::block_cipher_test!(cast5_nessie, "cast5", cast5::Cast5);
+cipher::block_cipher_test!(cast5, cast5::Cast5);

@@ -7,7 +7,7 @@ name = "aes"
 version = "0.9.0-rc.0"
 dependencies = [
  "cfg-if",
- "cipher",
+ "cipher 0.5.0-rc.0",
  "cpufeatures",
  "hex-literal",
  "zeroize",
@@ -17,7 +17,7 @@ dependencies = [
 name = "aria"
 version = "0.2.0-pre"
 dependencies = [
- "cipher",
+ "cipher 0.5.0-rc.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "hex-literal",
 ]
 
@@ -25,7 +25,7 @@ dependencies = [
 name = "belt-block"
 version = "0.2.0-rc.0"
 dependencies = [
- "cipher",
+ "cipher 0.5.0-rc.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "hex-literal",
 ]
 
@@ -40,7 +40,7 @@ name = "blowfish"
 version = "0.10.0-rc.0"
 dependencies = [
  "byteorder",
- "cipher",
+ "cipher 0.5.0-rc.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -54,14 +54,14 @@ name = "camellia"
 version = "0.2.0-pre"
 dependencies = [
  "byteorder",
- "cipher",
+ "cipher 0.5.0-rc.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "cast5"
 version = "0.12.0-pre"
 dependencies = [
- "cipher",
+ "cipher 0.5.0-rc.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "hex-literal",
 ]
 
@@ -69,7 +69,7 @@ dependencies = [
 name = "cast6"
 version = "0.2.0-pre"
 dependencies = [
- "cipher",
+ "cipher 0.5.0-rc.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "hex-literal",
 ]
 
@@ -82,12 +82,21 @@ checksum = "baf1de4339761588bc0619e3cbc0120ee582ebb74b53b4efbf79117bd2da40fd"
 [[package]]
 name = "cipher"
 version = "0.5.0-rc.0"
+dependencies = [
+ "blobby",
+ "crypto-common 0.2.0-rc.3",
+ "inout 0.2.0-rc.5",
+]
+
+[[package]]
+name = "cipher"
+version = "0.5.0-rc.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "bd4ef774202f1749465fc7cf88d70fc30620e8cacd5429268f4bff7d003bd976"
 dependencies = [
  "blobby",
- "crypto-common",
- "inout",
+ "crypto-common 0.2.0-rc.3 (registry+https://github.com/rust-lang/crates.io-index)",
+ "inout 0.2.0-rc.4",
  "zeroize",
 ]
 
@@ -103,25 +112,42 @@ dependencies = [
 [[package]]
 name = "crypto-common"
 version = "0.2.0-rc.3"
+dependencies = [
+ "hybrid-array 0.3.1",
+]
+
+[[package]]
+name = "crypto-common"
+version = "0.2.0-rc.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8a23fa214dea9efd4dacee5a5614646b30216ae0f05d4bb51bafb50e9da1c5be"
 dependencies = [
- "hybrid-array",
+ "hybrid-array 0.3.0",
 ]
 
 [[package]]
 name = "des"
 version = "0.9.0-rc.0"
 dependencies = [
- "cipher",
+ "cipher 0.5.0-rc.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "hex-literal",
+]
+
+[[package]]
+name = "generic-array"
+version = "0.14.7"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "85649ca51fd72272d7821adaf274ad91c288277713d9c18820d8499a7ff69e9a"
+dependencies = [
+ "typenum",
+ "version_check",
 ]
 
 [[package]]
 name = "gift-cipher"
 version = "0.0.1-rc.0"
 dependencies = [
- "cipher",
+ "cipher 0.5.0-rc.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "hex-literal",
 ]
 
@@ -142,10 +168,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "hybrid-array"
+version = "0.3.1"
+dependencies = [
+ "generic-array",
+ "typenum",
+]
+
+[[package]]
 name = "idea"
 version = "0.6.0-pre"
 dependencies = [
- "cipher",
+ "cipher 0.5.0-rc.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
@@ -154,7 +188,14 @@ version = "0.2.0-rc.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ac5e145e8ade9f74c0a5efc60ccb4e714b0144f7e2220b7ca64254feee71c57f"
 dependencies = [
- "hybrid-array",
+ "hybrid-array 0.3.0",
+]
+
+[[package]]
+name = "inout"
+version = "0.2.0-rc.5"
+dependencies = [
+ "hybrid-array 0.3.1",
 ]
 
 [[package]]
@@ -162,7 +203,7 @@ name = "kuznyechik"
 version = "0.9.0-rc.0"
 dependencies = [
  "cfg-if",
- "cipher",
+ "cipher 0.5.0-rc.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "hex-literal",
 ]
 
@@ -176,7 +217,7 @@ checksum = "875b3680cb2f8f71bdcf9a30f38d48282f5d3c95cbf9b3fa57269bb5d5c06828"
 name = "magma"
 version = "0.10.0-rc.0"
 dependencies = [
- "cipher",
+ "cipher 0.5.0-rc.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "hex-literal",
 ]
 
@@ -184,14 +225,14 @@ dependencies = [
 name = "rc2"
 version = "0.9.0-pre"
 dependencies = [
- "cipher",
+ "cipher 0.5.0-rc.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "rc5"
 version = "0.1.0-pre"
 dependencies = [
- "cipher",
+ "cipher 0.5.0-rc.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "hex-literal",
 ]
 
@@ -199,14 +240,14 @@ dependencies = [
 name = "serpent"
 version = "0.6.0-pre"
 dependencies = [
- "cipher",
+ "cipher 0.5.0-rc.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "sm4"
 version = "0.6.0-pre"
 dependencies = [
- "cipher",
+ "cipher 0.5.0-rc.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "hex-literal",
 ]
 
@@ -214,7 +255,7 @@ dependencies = [
 name = "speck-cipher"
 version = "0.0.0"
 dependencies = [
- "cipher",
+ "cipher 0.5.0-rc.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "hex-literal",
 ]
 
@@ -222,7 +263,7 @@ dependencies = [
 name = "threefish"
 version = "0.6.0-pre"
 dependencies = [
- "cipher",
+ "cipher 0.5.0-rc.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "hex-literal",
  "zeroize",
 ]
@@ -231,7 +272,7 @@ dependencies = [
 name = "twofish"
 version = "0.8.0-pre"
 dependencies = [
- "cipher",
+ "cipher 0.5.0-rc.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "hex-literal",
 ]
 
@@ -242,10 +283,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1dccffe3ce07af9386bfd29e80c0ab1a8205a2fc34e4bcd40364df902cfa8f3f"
 
 [[package]]
+name = "version_check"
+version = "0.9.5"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0b928f33d975fc6ad9f86c8f283853ad26bdd5b10b7f1542aa2fa15e2289105a"
+
+[[package]]
 name = "xtea"
 version = "0.0.1-pre.0"
 dependencies = [
- "cipher",
+ "cipher 0.5.0-rc.0 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
